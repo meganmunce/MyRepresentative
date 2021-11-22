@@ -1,50 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
-
-* {
-  margin: 1vw;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #8E7DBE;
-  color: #4E3E7A;
+  background-color: #FFF;
+  font-family: 'Cabin', sans-serif;
+}
+
+#start {
   text-align: center;
 }
 
-a {
-  color: inherit;
+#start h1 {
+  font-weight: 700;
+  font-size: 50px;
 }
 
-section {
+#start h2 {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+#start p {
+  font-style: italic;
+}
+
+#start button {
+  display: inline block;
+  font-family: 'Cabin', sans- serif;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #B4CDED;
+  margin: 1vh;
+}
+
+#start button:hover {
+  animation: colorchange 2s
+    ease-in-out;
+  animation-repeat: infinite;
+}
+
+#start form {
+  display: block;
+  margin: 3vw;
+}
+
+#start form label {
+  display: block;
+}
+
+.zip {
+  opacity: 0;
+}
+
+@keyframes colorchange {
+  0%{background-color: #B4CDED; }
+  25%{background-color: #FF0035;}
+  50%{background-color: #344966;}
+  75%{background-color: #FF0035;}
+  100%{background-color: #B4CDED;}
+}
+
+#tweetexamples {
+  text-align: center;
+  justify-content: center;
+}
+
+.twitter-tweet {
+  margin-left: 40vh;
+  display: block;
+}
+
+/* RESULT */
+
+.content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  max-height: 100vh;
+  overflow: scroll;
   grid-template-areas:
-   "profile tweets"
-   "tktk statements";
-  text-align: left;
-
+   "reps tweets";
+   grid-column-gap: 1vw;
 }
 
-#representativeProfile{
-  border: 2px solid #4E3E7A;
-  width: 30vw;
-  grid-area: profile;
+.reps {
+  grid-area: reps;
 }
 
-#tweetFeed {
-  border: 2px solid #4E3E7A;
-  min-width: 60vw;
+.tweets {
   grid-area: tweets;
 }
 
-#statementFeed {
-  border: 2px solid #4E3E7A;
-  min-width: 60vw;
-  grid-area: statements;
+.reps, .tweets {
+  border: 2px solid #344966;
+  display: inline-block;
+  border-radius: 3px;
 }
 
-.release {
-  background-color: #FFF;
-  padding: 1vw;
+.content h1 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
+  margin: 3vw;
+}
+
+.content h2 {
+  font-size: 18px;
+}
+
+.content h3 {
+  font-size: 16px;
+}
+
+.content form {
+  margin: 3vw;
+  display: inline-block;
+}
+
+.rep-card {
+  border: 2px solid gray;
+  border-radius: 17px;
+  margin: 2vw;
+  padding: 2vw;
 }

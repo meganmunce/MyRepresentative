@@ -14,53 +14,63 @@
     <link href="tktk" rel="icon">
     <link rel="stylesheet" href="myRepresentative.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="myRepresentative.js"></script>
+
 </head>
 
 <body>
 
-  <form id="zipcodeform">
-
-    <label for="zipcodeinput">Your ZIP code:</label>
-    <input type="text" id="zipcodeinput">
-    <input type="submit" value="Submit">
-
-  </form>
-
-  <form>
-
-    <label for="topicform">Topic:</label>
-    <input type="text" id="topicinput">
-    <input type="submit" value="Submit">
-
-  </form>
-
   <section>
 
-  <div id="representativeProfile">
-    <h1>Your Representative:</h1>
-    <h2>Name:</h2>
-    <p>Party affiliation:</p>
-    <p>Social media handle:</p>
-  </div>
+    <div id="start">
 
-  <div id="tweetFeed">
-    <h2>Tweets:</h2>
-  </div>
+<h1>My Representative</h1>
 
-  <div id="statementFeed">
-    <h2>Press Releases:</h2>
-    
-      <div class="release">
-        <h3>Title</h3>
-        <p>0000-00-00</p>
-        <a href="#">Click here to read more.</a>
-      </div>
+<p>My Representative shows you what your elected officials are Tweeting about the topics you care about.</p>
 
-      <div class="release">
-        <h3>Title</h3>
-        <p>0000-00-00</p>
-        <a href="#">Click here to read more.</a>
-      </div>
+  <h2>Learn what your representative thinks about:</h2>
+
+    <button class="topicbutton">Climate Change</button>
+    <button class="topicbutton">Government Spending</button>
+    <button class="topicbutton">Critical Race Theory</button>
+    <button class="topicbutton">Gun Control</button>
+    <button class="topicbutton">Infrastructure</button>
+
+    <!-- tweets -->
+
+<div id="tweetexamples">
+
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Bipartisan Infrastructure Deal is the biggest investment in ports in our history.<br><br>For American families, that means products moving faster and less expensively from the factory floor, through the supply chain, and to your home.</p>&mdash; President Biden (@POTUS) <a href="https://twitter.com/POTUS/status/1459236970719236097?ref_src=twsrc%5Etfw">November 12, 2021</a></blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+  <!-- forms -->
+
+   <div class="form-inputs">
+
+     <!--zip code form-->
+
+     <form id="zipcodeform">
+       <label for="zipcodeinput">Input your ZIP code to see a list of your elected officials:</label>
+       <input tupe="text" id="zipcodeinput">
+       <input type="button" value="Submit" onclick="loadReps()">
+     </form>
+
+     <form id="topicform">
+       <label for="topicinput">Choose a topic:</label>
+       <input type="text" id="topicinput">
+       <input type="button" value="Submit" onclick="saveTopic()">
+     </form>
+
+     <!--topic form-->
+
+
+    </div>
+
+
+
 
   </div>
 
